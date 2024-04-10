@@ -226,9 +226,9 @@ export default function Landing() {
                             <h1 className='text-xl'>John Patrick T. Marcellana</h1>
                             <h3 className='text-xl'>jptmarcellana@gmail.com</h3>
                             <h3 className='text-xl'>+639561520056</h3>
-                            <a href='https://www.linkedin.com/in/john-patrick-marcellana-61650224a/'>LinkedIn</a>
-                            <a href='https://github.com/MrRyushi'>Github</a>
-                        </div>
+                            <a href='https://www.linkedin.com/in/john-patrick-marcellana-61650224a/' className='block text-xl text-blue-400'>LinkedIn</a>
+                            <a href='https://github.com/MrRyushi' className='block text-xl text-blue-700'>Github</a>
+                        </div> 
                     </div>
                     <div className=''>
                         <form className='space-y-2'>
