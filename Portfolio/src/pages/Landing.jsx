@@ -1,6 +1,14 @@
 import '.././index.css'
 import { useState } from 'react'
 
+// -- images --
+// game of thrones
+import gotStartPage from '../assets/got/startPage.png'
+import gotHomePage from '../assets/got/homePage.png'
+// wordle
+import wordleStartPage from '../assets/wordle/startPage.png'
+import wordleSampleRun from '../assets/wordle/sampleRun.png'
+
 export default function Landing() {
     const [selected, setSelected] = useState('home')
 
@@ -70,6 +78,14 @@ export default function Landing() {
                             Through this platform, I aspire to highlight my proficiency in various programming languages, algorithms, and software development methodologies cultivated during my pursuit of a Bachelor's degree in Computer Science.
                         </h3>
                     </div>
+                    <div>
+                        <h3 className='font-bold text-xl'>Reflection</h3>
+                        <h3 className='text-xl ps-1'>
+                        Upon completing SAS3000, I gained valuable insights into my strengths and weaknesses, as well as a deeper understanding of the job industry. My career pursuits are intricately shaped by my knowledge, values, attitudes, and assumptions. 
+                        This amalgamation guides the paths I choose to pursue, underlining the importance of self-awareness in decision-making. Recognizing the significance of effective communication, I aim to enhance this skill within myself. The actions I 
+                        take from this point forward will not only determine my future trajectory but also influence the quality of my relationships, both with myself and others
+                        </h3>
+                    </div>
                 </div>
             </>) : (<></>)}
 
@@ -77,14 +93,84 @@ export default function Landing() {
                 <div className='px-72 space-y-5'>
                     <div className='space-y-1'>
                         <h1 className='text-3xl font-bold'>Past Projects (Still in development)</h1>
-                        <div className='text-xl ps-1'>
-                            <h3>Game of Thrones</h3>
-                            <h3>Wordle</h3>
-                            <h3>MyFarm</h3>
-                            <h3>Homeowners Association</h3>
-                            <h3>CyberLab</h3>
-                            <h3>HealthCare System</h3>
-                            <h3>Multivault</h3>
+                        <div className='text-xl ps-1 space-y-3'>
+                            <div className='space-y-2'>
+                                <h3>Game of Thrones</h3>
+                                <div className='space-x-2 border w-max p-2'>
+                                    <img src={gotStartPage} className='w-96 inline'/>
+                                    <img src={gotHomePage} className='w-96 inline'/>
+                                </div>
+                                <div className='bg-yellow-300 w-max py-2 px-4 flex items-center rounded-lg'>C Programming Language</div>
+                            </div>
+                            
+                            <div className='space-y-2'>
+                                <h3>Wordle</h3>
+                                <div className='space-x-2 border w-max p-2'>
+                                    <img src={wordleStartPage} className='w-96 inline'/>
+                                    <img src={wordleSampleRun} className='w-96 inline' />
+                                </div>
+                                <div className='bg-yellow-300 w-max py-2 px-4 flex items-center rounded-lg'>C Programming Language</div>
+                            </div>
+                            
+                            <div className='space-y-2'>
+                                <h3>MyFarm - a Simulation Farming Game</h3>
+                                <div className='bg-red-300 w-max py-2 px-4 flex items-center rounded-lg'>Java</div>
+                            </div>
+                            
+                            <div className='space-y-2'>
+                                <h3>Homeowners Association - a Management System for Homeowners</h3>
+                                <div className='flex gap-2'>
+                                    <div className='bg-red-300 w-max py-2 px-4 flex items-center rounded-lg'>Java</div>
+                                    <div className='bg-orange-300 w-max py-2 px-4 flex items-center rounded-lg'>HTML</div>
+                                    <div className='bg-slate-300 w-max py-2 px-4 flex items-center rounded-lg'>MySQL</div>                                  
+                                </div>
+                            </div>
+
+                            <div className='space-y-2'>
+                                <h3>CyberLab - a Computer Lab Management System</h3>
+                                <div className='flex gap-2'>
+                                    <div className='bg-orange-300 w-max py-2 px-4 flex items-center rounded-lg'>HTML, CSS, JavaScript</div>          
+                                    <div className='bg-yellow-300 w-max py-2 px-4 flex items-center rounded-lg'>NodeJS</div>                 
+                                    <div className='bg-amber-300 w-max py-2 px-4 flex items-center rounded-lg'>Express JS</div>      
+                                    <div className='bg-green-300 w-max py-2 px-4 flex items-center rounded-lg'>MongoDB</div> 
+                                </div>
+                            </div>
+
+                            <div className='space-y-2'>
+                                <h3>Medical Chatbot - a Diagnostic Chatbot</h3>
+                                <div className='bg-cyan-700 w-max py-2 px-4 flex items-center rounded-lg'>Prolog</div> 
+                            </div>
+
+                            <div className='space-y-2'> 
+                                <h3>HealthSys <a href='https://healthysys.netlify.app' className='text-blue-700 underline underline-offset-1'>Link</a></h3>
+                                <div className='flex gap-2'>
+                                    <div className='bg-blue-300 w-max py-2 px-4 flex items-center rounded-lg'>React JS</div>          
+                                    <div className='bg-yellow-300 w-max py-2 px-4 flex items-center rounded-lg'>NodeJS</div>                 
+                                    <div className='bg-amber-300 w-max py-2 px-4 flex items-center rounded-lg'>Express</div>      
+                                    <div className='bg-yellow-600 w-max py-2 px-4 flex items-center rounded-lg'>Firebase</div> 
+                                </div>
+                            </div>
+
+                            <div className='space-y-2'> 
+                                <h3>Sentimetry <a href='https://sentimetry.vercel.app' className='text-blue-700 underline underline-offset-1'>Link</a></h3>
+                                <div className='flex gap-2'>
+                                <div className='bg-blue-300 w-max py-2 px-4 flex items-center rounded-lg'>React JS</div>          
+                                    <div className='bg-yellow-300 w-max py-2 px-4 flex items-center rounded-lg'>NodeJS</div>                 
+                                    <div className='bg-amber-300 w-max py-2 px-4 flex items-center rounded-lg'>Express</div>      
+                                    <div className='bg-yellow-600 w-max py-2 px-4 flex items-center rounded-lg'>Firebase</div> 
+                                    <div className='bg-blue-500 w-max py-2 px-4 flex items-center rounded-lg'>Python</div> 
+                                </div>
+                            </div>
+
+                            <div className='space-y-2'>
+                                <h3>Multivault <a href='https://multivault.netlify.app' className='text-blue-700 underline underline-offset-1'>Link</a></h3>    
+                                <div className='flex gap-2'>
+                                    <div className='bg-blue-300 w-max py-2 px-4 flex items-center rounded-lg'>React JS</div>          
+                                    <div className='bg-yellow-300 w-max py-2 px-4 flex items-center rounded-lg'>NodeJS</div>                 
+                                    <div className='bg-amber-300 w-max py-2 px-4 flex items-center rounded-lg'>Express</div>      
+                                    <div className='bg-yellow-600 w-max py-2 px-4 flex items-center rounded-lg'>Firebase</div> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
