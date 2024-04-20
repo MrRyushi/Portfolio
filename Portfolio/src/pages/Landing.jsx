@@ -4,9 +4,10 @@ import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
 
-export default function Landing() {
-    const [selected, setSelected] = useState('home')
+// import profile pic
+import profilePic from '../assets/profile/profile.png'
 
+export default function Landing() {
     const handleDownload = () => {
         // Path to the PDF file
         const pdfPath = '../../public/Resume_Marcellana_John_Patrick.pdf';
@@ -35,58 +36,74 @@ export default function Landing() {
       };
 
   return ( 
-    <div className='flex justify-center h-screen'>
-      <div className='space-y-10'>
-        <div className='flex gap-20 ps-20 w-screen p-5 bg-slate-900 text-slate-50 items-center'>
-            <button onClick={() => setSelected('home')} className='text-xl hover:text-blue-300'>Home</button>
-            <button onClick={() => setSelected('projects')} className='text-xl hover:text-blue-300'>Projects</button>
-            <button onClick={() => setSelected('skills')} className='text-xl hover:text-blue-300'>Skills</button>
+    <div className='flex h-screen'>
+      <div className=''>
+        <div className='flex gap-20 ps-20 w-screen p-5 bg-teal-950 text-slate-50 items-center'>
+            <button 
+                className='text-xl hover:text-blue-300'
+                onClick={() => {
+                    const tellMeMoreElement = document.getElementById('faq');
+                    if (tellMeMoreElement) {
+                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                }
+            >Home</button>
+            <button className='text-xl hover:text-blue-300'
+                onClick={() => {
+                    const tellMeMoreElement = document.getElementById('projects');
+                    if (tellMeMoreElement) {
+                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                }
+            >Projects</button>
+            <button className='text-xl hover:text-blue-300'
+                onClick={() => {
+                    const tellMeMoreElement = document.getElementById('skills');
+                    if (tellMeMoreElement) {
+                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                }
+            >Skills</button>
             <button onClick={() => handleDownload()} className='text-xl hover:text-blue-300'>Resume / CV</button>
-            <button onClick={() => setSelected('contact')} className='text-xl hover:text-blue-300'>Contact</button>
+            <button className='text-xl hover:text-blue-300'
+                onClick={() => {
+                    const tellMeMoreElement = document.getElementById('contact');
+                    if (tellMeMoreElement) {
+                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                }
+            >Contact</button>
         </div>
         <div>
-            {selected == 'home' ? (<>
-                <div className='px-72 space-y-5'>
-                    <div className='space-y-1'>
-                        <h1 className='text-4xl'>Hello! I am <b>John Patrick T. Marcellana</b></h1>
-                        <h3 className='text-2xl'>An aspiring Software Developer</h3>
-                    </div>
-                    <div className='space-y-2'>
-                        <h3 className='font-bold text-xl'>Welcome to my corner of the digital world!</h3>
-                        <h3 className='text-xl ps-1'>
-                            As a passionate student pursuing a Bachelor's degree in Computer Science, this e-portfolio serves as a digital canvas where I showcase my projects, accomplishments, and growth in the realm of technology.
-                            Throughout my academic endeavors, I've immersed myself in the dynamic world of coding, algorithms, and problem-solving. Each line of code written and each project undertaken has been a stepping stone in my quest for excellence in software development.
-                            Within these virtual walls, you'll find a collection of my projects, from humble beginnings to more intricate endeavors. Each project represents not just a piece of code, but a journey of discovery, learning, and innovation.
-                        </h3>
-                    </div>
-                    <div className='space-y-2'>
-                        <h3 className='font-bold text-xl'>What are my goals?</h3>
-                        <h3 className='text-xl ps-1'>
-                            To leverage my comprehensive understanding of computer science principles and programming languages acquired through a Bachelor's degree in Computer Science towards securing a challenging position as a software developer. 
-                            Eager to contribute innovative solutions to real-world problems, collaborate within dynamic teams, and continuously expand my knowledge in emerging technologies
-                        </h3>
+            <div className='px-72 space-y-10 py-20 bg-stone-50'>
+                <div className='space-y-1 flex justify-center gap-20 items-center mb-20'>
+                    <div>
+                        <h1 className='text-4xl'>Hi, I'm <b>JP</b></h1>
+                        <h3 className='text-xl'>An aspiring Software Engineer</h3>
                     </div>
                     <div>
-                        <h3 className='font-bold text-xl'>My Objective:</h3>
-                        <h3 className='text-xl ps-1'>
-                            In this portfolio, my aim is to present a comprehensive overview of my educational background, technical skills, and diverse projects within the realm of computer science. 
-                            Through this platform, I aspire to highlight my proficiency in various programming languages, algorithms, and software development methodologies cultivated during my pursuit of a Bachelor's degree in Computer Science.
-                        </h3>
+                        <img src={profilePic} className='w-96'/>
+                        <p className="text-sm text-gray-500 mt-2">Image source: <a href="https://www.pinterest.ph/pin/1118440888690338214/" target="_blank" rel="noopener noreferrer">Pinterest</a></p>
                     </div>
+
                 </div>
-            </>) : (<></>)}
+                <div className='space-y-2'>
+                    <h1 className='font-bold text-2xl'>About me</h1>
+                    <h3 className='text-xl ps-1'>
+                        I'm currently an Undergraduate Student taking up Bachelor of Science in Computer Science Major in  Software Technology at De La Salle University. I am eager to contribute 
+                        innovative solutions to real-world problems, collaborate within dynamic teams, and continuously expand my knowledge in emerging technologies. I am interested in learning more
+                        about <b>Web Development</b> and also learning about <b>Computer Vision</b>. Throughout my three years of college, as I delved into a multitude of projects, programs, and lessons, 
+                        my passion for the field only grew stronger. 
+                    </h3>
+                </div>
+            </div>
 
-            {selected == 'projects' ? (<>
-                <Projects />
-            </>) : (<></>)}
+            <Projects />
 
-            {selected == 'skills' ? (<>
-                <Skills />
-            </>) : (<></>)}
+            <Skills />
 
-            {selected == 'contact' ? (<>
-                <Contact />
-            </>) : (<></>)}
+            <Contact />
+
         </div>
       </div>
     </div>

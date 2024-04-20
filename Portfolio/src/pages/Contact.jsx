@@ -1,10 +1,11 @@
 export default function Contact() {
   return (
-    <div className='px-72 space-y-10'>
+    <div id="contact" className='px-72 space-y-10 py-20'>
         <div className='space-y-2'>
             <h1 className='font-bold text-3xl'>Contact Information</h1>
             <div className='ps-2'>
                 <h1 className='text-xl'>John Patrick T. Marcellana</h1>
+                <h3 className='text-xl'>Las Piñas City</h3>
                 <h3 className='text-xl'>jptmarcellana@gmail.com</h3>
                 <h3 className='text-xl'>+639561520056</h3>
                 <a href='https://www.linkedin.com/in/john-patrick-marcellana-61650224a/' className='block text-xl text-blue-400'>LinkedIn</a>
