@@ -38,9 +38,9 @@ export default function Landing() {
   return ( 
     <div className='flex h-screen'>
       <div className=''>
-        <div className='flex gap-20 ps-20 w-screen p-5 bg-teal-950 text-slate-50 items-center'>
+        <div className='flex gap-20 ps-20 w-screen p-5 bg-teal-900 text-gray-50 items-center'>
             <button 
-                className='text-xl hover:text-blue-300'
+                className='text-xl hover:text-teal-400'
                 onClick={() => {
                     const tellMeMoreElement = document.getElementById('faq');
                     if (tellMeMoreElement) {
@@ -48,7 +48,7 @@ export default function Landing() {
                     }}
                 }
             >Home</button>
-            <button className='text-xl hover:text-blue-300'
+            <button className='text-xl hover:text-teal-400'
                 onClick={() => {
                     const tellMeMoreElement = document.getElementById('projects');
                     if (tellMeMoreElement) {
@@ -56,7 +56,7 @@ export default function Landing() {
                     }}
                 }
             >Projects</button>
-            <button className='text-xl hover:text-blue-300'
+            <button className='text-xl hover:text-teal-400'
                 onClick={() => {
                     const tellMeMoreElement = document.getElementById('skills');
                     if (tellMeMoreElement) {
@@ -64,8 +64,8 @@ export default function Landing() {
                     }}
                 }
             >Skills</button>
-            <button onClick={() => handleDownload()} className='text-xl hover:text-blue-300'>Resume / CV</button>
-            <button className='text-xl hover:text-blue-300'
+            <button onClick={() => handleDownload()} className='text-xl hover:text-teal-400'>Resume / CV</button>
+            <button className='text-xl hover:text-teal-400'
                 onClick={() => {
                     const tellMeMoreElement = document.getElementById('contact');
                     if (tellMeMoreElement) {

@@ -17,7 +17,7 @@ export default function Contact() {
                 <h1 className='font-bold text-3xl'>Send me a message!</h1>
                 <input type='email' placeholder='Your email' className='block w-1/2 border border-black rounded-lg p-2'/>
                 <textarea type='text' placeholder='Your message' className='w-1/2 h-28 border border-black rounded-lg p-2'/>
-                <button type='submit' className='block border bg-slate-900 text-slate-50 py-3 px-5 rounded-xl hover:bg-slate-700'>Send</button>
+                <button type='submit' className='block border bg-gray-900 text-gray-50 py-3 px-5 rounded-xl hover:bg-gray-700'>Send</button>
             </form>
         </div>
     </div>

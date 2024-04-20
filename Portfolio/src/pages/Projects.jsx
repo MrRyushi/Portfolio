@@ -34,10 +34,13 @@ import chatbotSymptoms from '../assets/chatbot/symptoms.png'
 import chatbotTimeline from '../assets/chatbot/timeline.png'
 import chatbotVice from '../assets/chatbot/vice.png'
 
+// -- carousel --
+import { Carousel } from "@material-tailwind/react"
+
 export default function Projects() {
   return (
     <div id='projects' className='px-72 space-y-5 bg-teal-900 py-20'>
-        <div className='space-y-1 text-neutral-50'>
+        <div className='space-y-1 text-gray-50'>
             <h1 className='text-4xl font-bold'>Past Projects</h1>
             <div className='text-xl ps-1 space-y-16'>
                 <div className='space-y-2'>
@@ -46,7 +49,7 @@ export default function Projects() {
                         <img src={gotStartPage} className='inline'/>
                         <img src={gotHomePage} className='inline'/>
                     </div>
-                    <div className='bg-yellow-600 w-max py-2 px-4 flex items-center rounded-lg'>C</div>
+                    <div className='bg-yellow-800 w-max py-2 px-4 flex items-center rounded-lg'>C</div>
                 </div>
                 
                 <div className='space-y-2'>
@@ -55,18 +58,19 @@ export default function Projects() {
                         <img src={wordleStartPage} className='inline'/>
                         <img src={wordleSampleRun} className='inline' />
                     </div>
-                    <div className='bg-yellow-600 w-max py-2 px-4 flex items-center rounded-lg'>C</div>
+                    <div className='bg-yellow-800 w-max py-2 px-4 flex items-center rounded-lg'>C</div>
                 </div>
                 
                 <div className='space-y-2'>
                     <h3>MyFarm - a Simulation Farming Game</h3>
-                    <div className='flex space-x-2 overflow-x-auto border p-2 items-center'>
-                        <img src={myfarmStartPage} className='inline'/>
-                        <img src={myfarmShop} className='inline'/>
-                        <img src={myfarmFarmLot} className='inline'/>
-                        <img src={myfarmInventoryPage} className='inline'/>
-                        <img src={myfarmStats} className='inline'/>
-                    </div>
+                    <Carousel className='rounded-xl'>
+                        <img src={myfarmStartPage} alt='image 1' className='h-full w-full object-cover'/>
+                        <img src={myfarmShop} alt='image 2' className='h-full w-full object-cover'/>
+                        <img src={myfarmFarmLot} alt='image 3' className='h-full w-full object-cover'/>
+                        <img src={myfarmInventoryPage} alt='image 4' className='h-full w-full object-cover'/>
+                        <img src={myfarmStats} alt='image 5' className='h-full w-full object-cover'/>
+                    </Carousel>
+
                     <div className='flex gap-2'>
                         <div className='bg-red-600 w-max py-2 px-4 flex items-center rounded-lg'>Java</div>
                         <div className='bg-red-600 w-max py-2 px-4 flex items-center rounded-lg'>Java Swing</div>
@@ -75,10 +79,10 @@ export default function Projects() {
                 
                 <div className='space-y-2'>
                     <h3>Homeowners Association - a Management System for a Homeowners Association</h3>
-                    <div className='flex space-x-2 overflow-x-auto border p-2'>
+                    <Carousel className='rounded-xl'>
                         <img src={hoLanding} className='inline'/>
                         <img src={hoRegister} className='inline'/>
-                    </div>
+                    </Carousel>
                     <div className='flex gap-2'>
                         <div className='bg-red-600 w-max py-2 px-4 flex items-center rounded-lg'>Java</div>
                         <div className='bg-orange-600 w-max py-2 px-4 flex items-center rounded-lg'>HTML</div>
@@ -89,17 +93,17 @@ export default function Projects() {
 
                 <div className='space-y-2'>
                     <h3>CyberLab - a Computer Lab Reservation Management System</h3>
-                    <div className='flex space-x-2 overflow-x-auto border p-2'>
+                    <Carousel className='rounded-xl'>
                         <img src={labLogin} className='inline'/>
                         <img src={labRegister} className='inline'/>
                         <img src={labHomePage} className='inline'/>
                         <img src={labRoom} className='inline'/>
                         <img src={labProfile} className='inline'/>
                         <img src={labReservation} className='inline'/>
-                    </div>
+                    </Carousel>
                     <div className='flex gap-2'>
                         <div className='bg-orange-600 w-max py-2 px-4 flex items-center rounded-lg'>HTML, CSS, JavaScript</div>          
-                        <div className='bg-yellow-600 w-max py-2 px-4 flex items-center rounded-lg'>NodeJS</div>                 
+                        <div className='bg-yellow-800 w-max py-2 px-4 flex items-center rounded-lg'>NodeJS</div>                 
                         <div className='bg-amber-600 w-max py-2 px-4 flex items-center rounded-lg'>Express JS</div>      
                         <div className='bg-green-600 w-max py-2 px-4 flex items-center rounded-lg'>MongoDB</div> 
                     </div>
@@ -107,19 +111,18 @@ export default function Projects() {
 
                 <div className='space-y-2'>
                     <h3>Medical Chatbot - a Diagnostic Chatbot</h3>
-                    <div className='flex space-x-2 overflow-x-auto border p-2 items-center'>
-                        <img src={chatbotStartPage} className='inline'/>
-                        <img src={chatbotName} className='inline'/>
-                        <img src={chatbotAge} className='inline'/>
-                        <img src={chatbotEnvironment} className='inline'/>
-                        <img src={chatbotChiefComplaint} className='inline'/>
-                        <img src={chatbotSymptoms} className='inline'/>
-                        <img src={chatbotTimeline} className='inline'/>
-                        <img src={chatbotVice} className='inline'/>
-                        <img src={chatbotHistory} className='inline'/>
-                        <img src={chatbotResult} className='inline'/>
-                        <img src={chatbotOther} className='inline'/>
-
+                    <div className='flex space-x-2 items-center border overflow-x-auto p-2'>
+                        <img src={chatbotStartPage} className=''/>
+                        <img src={chatbotName} className=''/>
+                        <img src={chatbotAge} className=''/>
+                        <img src={chatbotEnvironment} className=''/>
+                        <img src={chatbotChiefComplaint} className=''/>
+                        <img src={chatbotSymptoms} className=''/>
+                        <img src={chatbotTimeline} className=''/>
+                        <img src={chatbotVice} className=''/>
+                        <img src={chatbotHistory} className=''/>
+                        <img src={chatbotResult} className=''/>
+                        <img src={chatbotOther} className=''/>
                     </div>
                     <div className='bg-cyan-700 w-max py-2 px-4 flex items-center rounded-lg'>Prolog</div> 
                 </div>
