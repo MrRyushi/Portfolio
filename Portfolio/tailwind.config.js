@@ -20,7 +20,11 @@ export default withMT({
                 700: "#0369a1",
                 800: "#075985",
                 900: "#0c4a6e",
-            }
+            },
+            teal: {
+                950: "rgb(4 47 46)"
+            },
+            complement: "rgb(47, 4, 5)"
         }
     },
   },

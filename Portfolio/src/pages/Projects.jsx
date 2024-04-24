@@ -59,76 +59,103 @@ import { Carousel } from "@material-tailwind/react"
 
 export default function Projects() {
   return (
-    <div id='projects' className='px-72 space-y-5 bg-teal-900 py-20'>
-        <div className='space-y-1 text-gray-50'>
-            <h1 className='text-4xl font-bold'>Past Projects</h1>
-            <div className='text-xl ps-1 space-y-16'>
+    <div id='projects' className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72 space-y-5 bg-teal-700 py-20'>
+        <div className='space-y-7 text-gray-50'>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold'>Projects</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 text-xl ps-1 gap-8 xs:gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-20'>
                 <div className='space-y-2'>
-                    <h3>Game of Thrones Game</h3>
-                    <div className='space-x-2 border w-max p-2'>
-                        <img src={gotStartPage} className='inline'/>
-                        <img src={gotHomePage} className='inline'/>
-                    </div>
-                    <div className='bg-gray-300 w-16 p-2 flex items-center rounded-lg'>
-                        <img src={iconC} alt='C' className=''/>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Game of Thrones-Inspired Game</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project, submitted as part of CCPROG1 - Logic Formulation and Introductory Programming course, entails the development of a Game of 
+                        Thrones-inspired game. In this game, players aim to accumulate Golden Dragons (GD), the currency of the realm, within a set time frame of 
+                        15 days.The game interface features various trading partners, each offering a unique set of wares and goods, with options including buying, 
+                        selling, managing finances at the Iron Bank of Braavos, and navigating via the wheelhouse.
+                    </p>
+                    <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-lg text-sm sm:text-md md:text-lg lg:text-xl'>
+                        C Language
                     </div>
                 </div>
                 
                 <div className='space-y-2'>
-                    <h3>Wordle</h3>
-                    <div className='space-x-2 border w-max p-2'>
-                        <img src={wordleStartPage} className='inline'/>
-                        <img src={wordleSampleRun} className='inline' />
-                    </div>
-                    <div className='bg-gray-300 w-16 p-2 flex items-center rounded-lg'>
-                        <img src={iconC} className=''/>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>C Wordle Plus</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project, submitted as part of CCPROG2 - Programming with Structured Data Types course aims to create a text-based version of the immensely 
+                        popular game Wordle. In Wordle, players attempt to guess a five-letter word within six attempts, 
+                        receiving feedback on their guesses to guide them. The task involves implementing this game in C while incorporating additional features.  
+    
+                    </p>
+                    <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        C Language
                     </div>
                 </div>
+
+                {/*CCDSTRU Checkers Project*/}
                 
                 <div className='space-y-2'>
-                    <h3>MyFarm - a Simulation Farming Game</h3>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>MyFarm - a Simulation Farming Game</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project was submitted in partial fulfillment of the course CCPROG3 - Object-Oriented Programming. Our task involved implementing a farming 
+                        simulator game wherein users can buy seeds, plant, grow, and harvest crops. The objective of the game is to accumulate as much gold and experience 
+                        as possible. The player gains perks as their farmer levels up such as double harvest drops, less seed costs, and less time before harvest.
+                    </p>
+                    {/*
                     <Carousel className='rounded-xl w-1/2'>
                         <img src={myfarmStartPage} alt='image 1' className='h-1/2 w-full object-cover'/>
                         <img src={myfarmShop} alt='image 2' className='h-1/2 w-full object-cover'/>
                         <img src={myfarmFarmLot} alt='image 3' className='h-1/2 w-full object-cover'/>
                         <img src={myfarmInventoryPage} alt='image 4' className='h-1/2 w-full object-cover'/>
                         <img src={myfarmStats} alt='image 5' className='h-1/2 w-full object-cover'/>
-                    </Carousel>
+                    </Carousel>*/}
 
                     <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconJava} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Java
                         </div>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconJavaSwing} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Java Swing
                         </div>
                     </div>
                 </div>
                 
                 <div className='space-y-2'>
-                    <h3>Homeowners Association - a Management System for a Homeowners Association</h3>
-                    <Carousel className='rounded-xl'>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Homeowners Management System</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project was submitted in partial fulfillment of the course CCINFOM - Information Management. This application handles the management system of
+                        a homeowners association in subdivisions. Admin user can register a homeowner, the association's assets, and occupants. This system monitors the 
+                        capacity of the village and also each residency in a home. Users can also rent facilities and other assets of the association such as gyms, pools, 
+                        and courts.
+                    </p>
+                    {/*<Carousel className='rounded-xl'>
                         <img src={hoLanding} className='inline'/>
                         <img src={hoRegister} className='inline'/>
-                    </Carousel>
+                    </Carousel>*/}
                     <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconJava} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Java
                         </div>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconHTML} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            MySQL
                         </div>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconMysql} className=''/>
-                        </div>   
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconJSP} className=''/>
-                        </div>                    
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            JSP
+                        </div>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            HTML
+                        </div>              
                     </div>
                 </div>
 
+                {/* CSADPRG Tax Calculator */}
+
                 <div className='space-y-2'>
-                    <h3>CyberLab - a Computer Lab Reservation Management System</h3>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>CyberLab - a Computer Lab Reservation Management System</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project was submitted in partial fulfilment of the course CCAPDEV - Web Application Development. This software application intends to help
+                        computer laboratory facilities in order to better manage reservations of slots. This app basically records a reservation of a client with a specified
+                        time slot and date. Students can access this system to easily book a slot as well and they can view which seats are taken for a specified time inverval 
+                        on a specified date.
+                    </p>
+                    {/*
                     <Carousel className='rounded-xl'>
                         <img src={labLogin} className='inline'/>
                         <img src={labRegister} className='inline'/>
@@ -136,31 +163,39 @@ export default function Projects() {
                         <img src={labRoom} className='inline'/>
                         <img src={labProfile} className='inline'/>
                         <img src={labReservation} className='inline'/>
-                    </Carousel>
-                    <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconHTML} className=''/>
+                    </Carousel>*/}
+                    <div className='flex flex-wrap gap-2'>
+                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            HTML
                         </div>         
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconCSS} className=''/>
+                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            CSS
                         </div>    
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconJavaScript} className=''/>
+                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            JavaScript
                         </div>    
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconNode} className=''/>
+                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Node JS
                         </div>                    
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconExpress} className=''/>
+                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Express
                         </div>      
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconMongoDB} className=''/>
+                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            MongoDB
                         </div> 
                     </div>
+
                 </div>
 
                 <div className='space-y-2'>
-                    <h3>Medical Chatbot - a Diagnostic Chatbot</h3>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Medical Chatbot</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This program was submitted in partial fulfilment of the course CSINTSY - Introduction to Intelligent Systems. This program is a diagnostic chat bot
+                        that aims to help those in remote areas with a little to no access to medical facilities. This system tries to identify the sickness of the patient
+                        through asking questions about their chief complaint, symptoms, and personal medical history. We used a backward chaining system shell in order to 
+                        determine the sickness of the patient.
+                    </p>
+                    {/*
                     <Carousel className='rounded-xl w-1/2'>
                         <img src={chatbotStartPage} className='w-full'/>
                         <img src={chatbotName} className='w-full'/>
@@ -173,73 +208,105 @@ export default function Projects() {
                         <img src={chatbotHistory} className='w-full'/>
                         <img src={chatbotResult} className='w-full'/>
                         <img src={chatbotOther} className='w-full'/>
-                    </Carousel>
+                </Carousel>*/}
                     <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconProlog} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Prolog
                         </div> 
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconJava} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Java
                         </div> 
                     </div>
                 </div>
 
                 <div className='space-y-2'> 
-                    <h3>HealthSys: <a href='https://healthysys.netlify.app' className='text-neutral-50 underline underline-offset-1'>https://healthysys.netlify.app</a></h3>
-                    <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconReact} className=''/>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>HealthSys {/*<a href='https://healthysys.netlify.app' className='text-neutral-50 underline underline-offset-1'>https://healthysys.netlify.app</a>*/}</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project was submitted in partial fulfillment of the course CSSWENG - Software Engineering. This project intends to help a client that struggles
+                        with managing data records of patients in their hospitals. This system aids them by providing a medium to store the data with ease through digital forms
+                        to keep their records. This system shows each appointment of a patient in a specified clinic. The clinic admin is in charge of creating records in the system
+                        and retrieving them for external purposes.
+                    </p>
+                    <div className='flex flex-wrap gap-2'>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            React
                         </div>       
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconNode} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Node JS
                         </div>               
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconExpress} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Express
                         </div>    
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconFirebase} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Firebase
+                        </div> 
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Tailwind CSS
                         </div> 
                     </div>
                 </div>
 
                 <div className='space-y-2'> 
-                    <h3>Sentimetry: <a href='https://sentimetry.vercel.app' className='text-neutral-50 underline underline-offset-1'>https://sentimetry.vercel.app</a></h3>
-                    <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconReact} className=''/>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Sentimetry {/*<a href='https://sentimetry.vercel.app' className='text-neutral-50 underline underline-offset-1'>https://sentimetry.vercel.app</a>*/}</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project was submitted in partial fulfilment of the course EMPATHY - Empathic Computing in Human-System Interaction. This application intends to 
+                        help those that are experiencing mental health problems. This application basically is a journaling system where users can sign up and log their journal entries. 
+                        The system will accurately detect the emotions in the journal they provided and the application will provide a tailored feedback specifically based on the 
+                        input they have logged.
+                    </p>
+                    <div className='flex flex-wrap gap-2'>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            React
                         </div>       
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconNode} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Node JS
                         </div>               
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconExpress} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Express
                         </div>    
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconFirebase} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Firebase
                         </div> 
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconPython} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Python
+                        </div> 
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Tailwind CSS
+                        </div> 
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Hugging Face
                         </div> 
                     </div>
                 </div>
 
                 <div className='space-y-2'>
-                    <h3>Multivault: <a href='https://multivault.netlify.app' className='text-neutral-50 underline underline-offset-1'>https://multivault.netlify.app</a></h3>    
-                    <div className='flex gap-2'>
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconReact} className=''/>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Multivault {/*<a href='https://multivault.netlify.app' className='text-neutral-50 underline underline-offset-1'>https://multivault.netlify.app</a>*/}</h3>
+                    <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        This project was submitted in partial fulfillment of the course STSWENG - Advanced Software Engineering. It aims to assist businesses in managing 
+                        their inventory efficiently. The application serves as an inventory management system that enables administrators (owners of the establishment) to 
+                        oversee their inventory. Administrators can add information such as quantity, expiration date, and perishability status for each item. The system 
+                        promptly notifies administrators if any items are running low on stock or nearing expiration.  
+                    </p>    
+                    <div className='flex flex-wrap gap-2'>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            React
                         </div>       
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconNode} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Node JS
                         </div>               
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconExpress} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Express
                         </div>    
-                        <div className='bg-gray-300 w-16 p-2 rounded-lg items-center flex'>
-                            <img src={iconFirebase} className=''/>
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Firebase
+                        </div> 
+                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                            Tailwind CSS
                         </div> 
                     </div>
                 </div>
+
+                {/* CSARCH2 Project */}
             </div>
         </div>
     </div>
