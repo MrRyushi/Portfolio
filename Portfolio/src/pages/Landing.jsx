@@ -3,7 +3,8 @@ import { Transition } from '@headlessui/react'; // Import Transition from headle
 import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
-import profilePic from '../assets/profile/profile.png';
+
+import Work from './Work';
 
 export default function Landing() {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Landing() {
 
     useEffect(() => {
         function handleResize() {
-            setIsSmallScreen(window.innerWidth < 1007); // Adjust the width as needed
+            setIsSmallScreen(window.innerWidth < 768); // Adjust the width as needed
         }
 
         window.addEventListener('resize', handleResize);
@@ -48,27 +49,18 @@ export default function Landing() {
     };
 
     return (
-        <div className='h-screen w-screen'>
-            <div id='home' className='flex justify-between items-center bg-teal-950 text-gray-50 px-5 py-3'>
-                <button
-                    className='blockhover:text-teal-400 ps-10 md:ps-20 text-md sm:text-lg md:text-xl'
-                    onClick={() => {
-                        const tellMeMoreElement = document.getElementById('home');
-                        if (tellMeMoreElement) {
-                            tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    }}
-                >
-                    Home
-                </button>
+        <div className='w-screen bg-gradient-to-r from-teal-950 to-teal-600'>
+            <div id='home' className='items-center text-gray-50 px-5 py-6'>
                 {isSmallScreen ? (
-                    <button className='text-md sm:text-lg md:text-xl hover:text-teal-400 pe-10' onClick={() => setIsOpen(!isOpen)}>
-                        Menu
-                    </button>
+                    <div className='flex justify-start montserrat ps-2'>
+                        <button className='text-lg sm:text-lg md:text-xl hover:text-teal-400 pe-10' onClick={() => setIsOpen(!isOpen)}>
+                            Menu
+                        </button>
+                    </div>
                 ) : (
-                    <div className='flex gap-10 item-center pe-20'>
+                    <div className='flex gap-24 item-center montserrat justify-center'>
                         <button
-                            className='block text-xl hover:text-teal-400'
+                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
                             onClick={() => {
                                 setIsOpen(false);
                                 const tellMeMoreElement = document.getElementById('projects');
@@ -80,7 +72,7 @@ export default function Landing() {
                             Projects
                         </button>
                         <button
-                            className='block text-xl hover:text-teal-400'
+                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
                             onClick={() => {
                                 setIsOpen(false);
                                 const tellMeMoreElement = document.getElementById('skills');
@@ -92,7 +84,7 @@ export default function Landing() {
                             Skills
                         </button>
                         <button
-                            className='block text-xl hover:text-teal-400'
+                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
                             onClick={() => {
                                 setIsOpen(false);
                                 handleDownload();
@@ -101,7 +93,7 @@ export default function Landing() {
                             Resume / CV
                         </button>
                         <button
-                            className='block text-xl hover:text-teal-400'
+                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
                             onClick={() => {
                                 setIsOpen(false);
                                 const tellMeMoreElement = document.getElementById('contact');
@@ -176,28 +168,17 @@ export default function Landing() {
                 )}
             </Transition>
             {/* Main Content */}
-            <div className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72 space-y-10 py-20 bg-stone-50 w-screen'>
-                <div className='space-y-1 flex justify-center gap-20 items-center mb-20'>
-                    <div>
-                        <h1 className='text-2xl xs:text-2xl md:text-3xl lg:text-4xl'>Hi, I'm <b>JP</b></h1>
-                        <h3 className='text-sm xs:text-md md:text-lg lg:text-xl'>An aspiring Software Engineer</h3>
-                    </div>
-                    <div>
-                        <img src={profilePic} className='w-96'/>
-                        <p className="text-xs md:text-md text-gray-500 mt-2">Image source: <a href="https://www.pinterest.ph/pin/1118440888690338214/" target="_blank" rel="noopener noreferrer">Pinterest</a></p>
+            <div className='space-y-10 py-20 bg-stone-50 w-screen text-gray-50 montserrat'>
+                <div className='xs:px-12 sm:px-16 md:px-20 lg:px-24 xl:px-32 space-y-1 flex justify-center gap-20 items-center mb-20 px-20 py-24 px w-full'>
+                    <div className='space-y-6 w-full bg-center bg-no-repeat bg-cover '>
+                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl leading-none text-center'>Hi, I'm John Marcellana</h1>
+                        <h3 className='text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-center'>An aspiring Software Engineer</h3>
                     </div>
 
                 </div>
-                <div className='space-y-2'>
-                    <h1 className='font-bold text-lg md:text-xl lg:text-2xl'>About me</h1>
-                    <h3 className='text-sm md:text-lg xl:text-xl ps-1'>
-                        I'm currently an Undergraduate Student taking up Bachelor of Science in Computer Science Major in  Software Technology at De La Salle University. I am eager to contribute 
-                        innovative solutions to real-world problems, collaborate within dynamic teams, and continuously expand my knowledge in emerging technologies. I am interested in learning more
-                        about <b>Web Development</b> and also learning about <b>Computer Vision</b>. Throughout my three years of college, as I delved into a multitude of projects, programs, and lessons, 
-                        my passion for the field only grew stronger. 
-                    </h3>
-                </div>
             </div>
+
+            <Work />
 
             <Skills />
 

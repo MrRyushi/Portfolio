@@ -59,24 +59,24 @@ import { Carousel } from "@material-tailwind/react"
 
 export default function Projects() {
   return (
-    <div id='projects' className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72 space-y-5 bg-teal-700 py-20'>
+    <div id='projects' className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72 space-y-5 bg-gradient-to-r from-teal-950 to-teal-600 py-20 montserrat'>
         <div className='space-y-7 text-gray-50'>
             <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold'>Projects</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 text-xl ps-1 gap-8 xs:gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-20'>
-                <div className='space-y-2'>
-                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Game of Thrones-Inspired Game</h3>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
+                    <h3 className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100'>Game of Thrones-Inspired Game</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project, submitted as part of CCPROG1 - Logic Formulation and Introductory Programming course, entails the development of a Game of 
                         Thrones-inspired game. In this game, players aim to accumulate Golden Dragons (GD), the currency of the realm, within a set time frame of 
                         15 days.The game interface features various trading partners, each offering a unique set of wares and goods, with options including buying, 
                         selling, managing finances at the Iron Bank of Braavos, and navigating via the wheelhouse.
                     </p>
-                    <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-lg text-sm sm:text-md md:text-lg lg:text-xl'>
+                    <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-lg text-sm sm:text-md md:text-lg lg:text-xl'>
                         C Language
                     </div>
                 </div>
                 
-                <div className='space-y-2'>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>C Wordle Plus</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project, submitted as part of CCPROG2 - Programming with Structured Data Types course aims to create a text-based version of the immensely 
@@ -84,14 +84,14 @@ export default function Projects() {
                         receiving feedback on their guesses to guide them. The task involves implementing this game in C while incorporating additional features.  
     
                     </p>
-                    <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                    <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                         C Language
                     </div>
                 </div>
 
                 {/*CCDSTRU Checkers Project*/}
                 
-                <div className='space-y-2'>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>MyFarm - a Simulation Farming Game</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course CCPROG3 - Object-Oriented Programming. Our task involved implementing a farming 
@@ -108,16 +108,16 @@ export default function Projects() {
                     </Carousel>*/}
 
                     <div className='flex gap-2'>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Java
                         </div>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Java Swing
                         </div>
                     </div>
                 </div>
                 
-                <div className='space-y-2'>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Homeowners Management System</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course CCINFOM - Information Management. This application handles the management system of
@@ -129,17 +129,17 @@ export default function Projects() {
                         <img src={hoLanding} className='inline'/>
                         <img src={hoRegister} className='inline'/>
                     </Carousel>*/}
-                    <div className='flex gap-2'>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                    <div className='flex flex-wrap gap-2'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Java
                         </div>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             MySQL
                         </div>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             JSP
                         </div>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             HTML
                         </div>              
                     </div>
@@ -147,7 +147,7 @@ export default function Projects() {
 
                 {/* CSADPRG Tax Calculator */}
 
-                <div className='space-y-2'>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>CyberLab - a Computer Lab Reservation Management System</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfilment of the course CCAPDEV - Web Application Development. This software application intends to help
@@ -165,29 +165,29 @@ export default function Projects() {
                         <img src={labReservation} className='inline'/>
                     </Carousel>*/}
                     <div className='flex flex-wrap gap-2'>
-                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             HTML
                         </div>         
-                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             CSS
                         </div>    
-                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             JavaScript
                         </div>    
-                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Node JS
                         </div>                    
-                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Express
                         </div>      
-                        <div className='bg-teal-950 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             MongoDB
                         </div> 
                     </div>
 
                 </div>
 
-                <div className='space-y-2'>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Medical Chatbot</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This program was submitted in partial fulfilment of the course CSINTSY - Introduction to Intelligent Systems. This program is a diagnostic chat bot
@@ -210,16 +210,16 @@ export default function Projects() {
                         <img src={chatbotOther} className='w-full'/>
                 </Carousel>*/}
                     <div className='flex gap-2'>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Prolog
                         </div> 
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Java
                         </div> 
                     </div>
                 </div>
 
-                <div className='space-y-2'> 
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'> 
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>HealthSys {/*<a href='https://healthysys.netlify.app' className='text-neutral-50 underline underline-offset-1'>https://healthysys.netlify.app</a>*/}</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course CSSWENG - Software Engineering. This project intends to help a client that struggles
@@ -228,25 +228,25 @@ export default function Projects() {
                         and retrieving them for external purposes.
                     </p>
                     <div className='flex flex-wrap gap-2'>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             React
                         </div>       
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Node JS
                         </div>               
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Express
                         </div>    
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Firebase
                         </div> 
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Tailwind CSS
                         </div> 
                     </div>
                 </div>
 
-                <div className='space-y-2'> 
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'> 
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Sentimetry {/*<a href='https://sentimetry.vercel.app' className='text-neutral-50 underline underline-offset-1'>https://sentimetry.vercel.app</a>*/}</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfilment of the course EMPATHY - Empathic Computing in Human-System Interaction. This application intends to 
@@ -255,31 +255,31 @@ export default function Projects() {
                         input they have logged.
                     </p>
                     <div className='flex flex-wrap gap-2'>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             React
                         </div>       
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Node JS
                         </div>               
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Express
                         </div>    
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Firebase
                         </div> 
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Python
                         </div> 
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Tailwind CSS
                         </div> 
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Hugging Face
                         </div> 
                     </div>
                 </div>
 
-                <div className='space-y-2'>
+                <div className='space-y-2 bg-teal-950/30 rounded-xl p-5 hover:bg-teal-950/40'>
                     <h3 className='text-lg lg:text-xl xl:text-2xl font-bold'>Multivault {/*<a href='https://multivault.netlify.app' className='text-neutral-50 underline underline-offset-1'>https://multivault.netlify.app</a>*/}</h3>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course STSWENG - Advanced Software Engineering. It aims to assist businesses in managing 
@@ -288,19 +288,19 @@ export default function Projects() {
                         promptly notifies administrators if any items are running low on stock or nearing expiration.  
                     </p>    
                     <div className='flex flex-wrap gap-2'>
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             React
                         </div>       
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Node JS
                         </div>               
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Express
                         </div>    
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Firebase
                         </div> 
-                        <div className='bg-teal-950 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <div className='bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl'>
                             Tailwind CSS
                         </div> 
                     </div>

@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div id="contact" className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72  space-y-10 py-20'>
+    <div id="contact" className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72  space-y-10 py-20 bg-gray-50'>
         <div className='space-y-2'>
             <h1 className='font-bold text-xl md:text-2xl xl:text-3xl'>Contact Information</h1>
             <div className='ps-2'>
