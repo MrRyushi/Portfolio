@@ -63,6 +63,18 @@ export default function Landing() {
                             className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
                             onClick={() => {
                                 setIsOpen(false);
+                                const tellMeMoreElement = document.getElementById('experience');
+                                if (tellMeMoreElement) {
+                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
+                        >
+                            Experience
+                        </button>
+                        <button
+                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
+                            onClick={() => {
+                                setIsOpen(false);
                                 const tellMeMoreElement = document.getElementById('projects');
                                 if (tellMeMoreElement) {
                                     tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
@@ -123,6 +135,18 @@ export default function Landing() {
                             className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
                             onClick={() => {
                                 setIsOpen(false);
+                                const tellMeMoreElement = document.getElementById('experience');
+                                if (tellMeMoreElement) {
+                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
+                        >
+                            Experience
+                        </button>
+                        <button
+                            className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
+                            onClick={() => {
+                                setIsOpen(false);
                                 const tellMeMoreElement = document.getElementById('projects');
                                 if (tellMeMoreElement) {
                                     tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
@@ -169,9 +193,9 @@ export default function Landing() {
             </Transition>
             {/* Main Content */}
             <div className='space-y-10 py-20 bg-stone-50 w-screen text-gray-50 montserrat'>
-                <div className='xs:px-12 sm:px-16 md:px-20 lg:px-24 xl:px-32 space-y-1 flex justify-center gap-20 items-center mb-20 px-20 py-24 px w-full'>
-                    <div className='space-y-6 w-full bg-center bg-no-repeat bg-cover '>
-                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-10xl leading-none text-center'>Hi, I'm John Marcellana</h1>
+                <div className='xs:px-12 sm:px-16 md:px-20 lg:px-24 xl:px-32 2xl:px-48 space-y-1 flex justify-center gap-20 items-center mb-20 px-20 py-24 px w-full'>
+                    <div className='space-y-10 w-full bg-center bg-no-repeat bg-cover '>
+                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-9xl leading-none text-center'>Hi, I'm John Patrick Marcellana</h1>
                         <h3 className='text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-center'>An aspiring Software Engineer</h3>
                     </div>
 
