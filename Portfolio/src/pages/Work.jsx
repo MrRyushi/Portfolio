@@ -7,9 +7,7 @@ export default function Work() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    entry.target.classList.remove('out');
                 } else {
-                    entry.target.classList.add('out');
                     entry.target.classList.remove('visible');
                 }
             });

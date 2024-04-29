@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    overflow-x: hidden;
+    }
 
 .montserrat {
     font-family: Montserrat;
@@ -18,6 +21,3 @@
     opacity: 1;
   }
   
-  .fade-in.out {
-    opacity: 0;
-  }

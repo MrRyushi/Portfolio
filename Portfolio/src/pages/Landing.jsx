@@ -33,9 +33,7 @@ export default function Landing() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    entry.target.classList.remove('out');
                 } else {
-                    entry.target.classList.add('out');
                     entry.target.classList.remove('visible');
                 }
             });
@@ -78,7 +76,7 @@ export default function Landing() {
     };
 
     return (
-        <div className='w-screen bg-gradient-to-r from-teal-950 to-teal-600'>
+        <div className='w-screen bg-gradient-to-r from-teal-950 to-teal-600 overflow-hidden'>
             <div className='h-screen'>
                 <div id='home' className='items-center text-gray-50 px-5 py-6'>
                     {isSmallScreen ? (

@@ -63,9 +63,7 @@ export default function Projects() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    entry.target.classList.remove('out');
                 } else {
-                    entry.target.classList.add('out');
                     entry.target.classList.remove('visible');
                 }
             });
@@ -87,7 +85,7 @@ export default function Projects() {
                 <div className='space-y-2 fade-in'>
                     <div className='space-y-2 rounded-xl p-5 bg-teal-950/40 text-start'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => setShowGOT(true)}>Game of Thrones-Inspired Game {arrowUpFromSquare}</button>
-                        <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
+                        <p className='text-sm sm:text-md md:text-lg lg:text-xl leading-loose'>
                             This project, submitted as part of CCPROG1 - Logic Formulation and Introductory Programming course, entails the development of a Game of 
                             Thrones-inspired game. In this game, players aim to accumulate Golden Dragons (GD), the currency of the realm, within a set time frame of 
                             15 days.The game interface features various trading partners, each offering a unique set of wares and goods, with options including buying, 
