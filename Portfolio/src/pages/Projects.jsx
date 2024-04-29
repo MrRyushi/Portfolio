@@ -40,7 +40,10 @@ import { Carousel } from "@material-tailwind/react"
 import { useState } from 'react'
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
+const githubIcon = <FontAwesomeIcon icon={faGithub} />
 
 const arrowUpFromSquare = <FontAwesomeIcon icon={faArrowUpRightFromSquare}/>
 
@@ -76,9 +79,9 @@ export default function Projects() {
 
                 {showGOT && (
                     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-                        <div className='space-x-2 border w-max p-2 relative z-10'>
-                            <img src={gotStartPage} className='inline' alt="Game of Thrones Start Page"/>
-                            <img src={gotHomePage} className='inline' alt="Game of Thrones Home Page"/>
+                        <div className='xl:space-x-2 mx-16 space-y-2 border-2 border-white p-2 relative z-10 xl:flex items-center justify-center'>
+                            <img src={gotStartPage} className='mx-auto' alt="Game of Thrones Start Page"/>
+                            <img src={gotHomePage} className='' alt="Game of Thrones Home Page"/>
                         </div>
                         <div onClick={() => setShowGOT(false)} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80"></div>
                     </div>
@@ -100,9 +103,9 @@ export default function Projects() {
 
                 {showCWordle && (
                     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-                        <div className='space-x-2 border w-max p-2 relative z-10'>
-                            <img src={wordleStartPage} className='inline'/>
-                            <img src={wordleSampleRun} className='inline' />
+                        <div className='space-x-2 mx-16 space-y-2 border-2 border-white p-2 relative z-10 xl:flex items-center justify-center'>
+                            <img src={wordleStartPage} className='mx-auto'/>
+                            <img src={wordleSampleRun} className='mx-auto' />
                         </div>
                         <div onClick={() => setShowCWordle(false)} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80"></div>
                     </div>
@@ -111,7 +114,10 @@ export default function Projects() {
                 {/*CCDSTRU Checkers Project*/}
                 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
-                    <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowMyFarm(true)}>MyFarm {arrowUpFromSquare}</button>
+                    <div className='flex justify-between'>
+                        <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowMyFarm(true)}>MyFarm {arrowUpFromSquare}</button>
+                        <button className='text-3xl' onClick={() => window.open('https://github.com/Samoyedeu/MyFarmMCO2')}>{githubIcon}</button>
+                    </div>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course CCPROG3 - Object-Oriented Programming. Our task involved implementing a farming 
                         simulator game wherein users can buy seeds, plant, grow, and harvest crops. The objective of the game is to accumulate as much gold and experience 
@@ -130,16 +136,19 @@ export default function Projects() {
 
                 {showMyFarm && (
                     <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-                        <Carousel className='rounded-xl w-1/2 relative z-10'>
-                            <img src={myfarmStartPage} alt='image 1' className='w-full object-cover'/>
-                            <img src={myfarmShop} alt='image 2' className='w-full object-cover'/>
-                            <img src={myfarmFarmLot} alt='image 3' className='w-full object-cover'/>
-                            <img src={myfarmInventoryPage} alt='image 4' className='w-full object-cover'/>
-                            <img src={myfarmStats} alt='image 5' className='w-full object-cover'/>
-                        </Carousel>
+                        <div className="relative z-10 w-3/4 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 mx-auto">
+                            <Carousel className='rounded-xl h-full'>
+                                <img src={myfarmStartPage} alt='image 1' className='w-full h-full object-cover'/>
+                                <img src={myfarmShop} alt='image 2' className='w-full h-full object-cover'/>
+                                <img src={myfarmFarmLot} alt='image 3' className='w-full h-full object-cover'/>
+                                <img src={myfarmInventoryPage} alt='image 4' className='w-full h-full object-cover'/>
+                                <img src={myfarmStats} alt='image 5' className='w-full h-full object-cover'/>
+                            </Carousel>
+                        </div>
                         <div onClick={() => setShowMyFarm(false)} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80"></div>
                     </div>
                 )}
+
 
                 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
@@ -167,11 +176,13 @@ export default function Projects() {
                 </div>
 
                 {showHoA && (
-                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-                        <Carousel className='rounded-xl h-3/4 w-3/4 relative z-10'>
-                            <img src={hoLanding} className=''/>
-                            <img src={hoRegister} className=''/>
-                        </Carousel>
+                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 border">
+                        <div className="relative z-10 w-3/4 sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-3/4 mx-auto">
+                            <Carousel className='rounded-xl h-full mx-auto'>
+                                <img src={hoLanding} className=''/>
+                                <img src={hoRegister} className=''/>
+                            </Carousel>
+                        </div>
                         <div onClick={() => setShowHoA(false)} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80"></div>
                     </div>
                 )}
@@ -179,7 +190,10 @@ export default function Projects() {
                 {/* CSADPRG Tax Calculator */}
 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
-                    <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowCyberlab(true)}>CyberLab {arrowUpFromSquare}</button>
+                    <div className='flex justify-between'>
+                        <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowCyberlab(true)}>CyberLab {arrowUpFromSquare}</button>
+                        <button className='text-3xl' onClick={() => window.open('https://github.com/MrRyushi/CCAPDEV-Machine-Project')}>{githubIcon}</button>
+                    </div>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfilment of the course CCAPDEV - Web Application Development. This software application intends to help
                         computer laboratory facilities in order to better manage reservations of slots. This app basically records a reservation of a client with a specified
@@ -209,22 +223,28 @@ export default function Projects() {
                 </div>
 
                 {showCyberlab && (
-                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-                        <Carousel className='rounded-xl h-3/4 w-3/4 relative z-10'>
-                            <img src={labLogin} className='inline'/>
-                            <img src={labRegister} className='inline'/>
-                            <img src={labHomePage} className='inline'/>
-                            <img src={labRoom} className='inline'/>
-                            <img src={labProfile} className='inline'/>
-                            <img src={labReservation} className='inline'/>
-                        </Carousel>
+                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 border">
+                        <div className="relative z-10 w-3/4 sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-3/4 mx-auto">
+                            <Carousel className='rounded-xl h-full mx-auto'>
+                                <img src={labLogin} className='inline'/>
+                                <img src={labRegister} className='inline'/>
+                                <img src={labHomePage} className='inline'/>
+                                <img src={labRoom} className='inline'/>
+                                <img src={labProfile} className='inline'/>
+                                <img src={labReservation} className='inline'/>
+                            </Carousel>
+                        </div>
                         <div onClick={() => setShowCyberlab(false)} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80"></div>
                     </div>
                 )}
 
 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
-                    <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => setShowChatbot(true)}>Medical Chatbot {arrowUpFromSquare}</button>
+                    <div className='flex justify-between'>
+                        <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => setShowChatbot(true)}>Medical Chatbot {arrowUpFromSquare}</button>
+                        <button className='text-3xl' onClick={() => window.open('https://github.com/SakuZN/PROLOG-MCO2')}>{githubIcon}</button>
+                    </div>
+                    
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This program was submitted in partial fulfilment of the course CSINTSY - Introduction to Intelligent Systems. This program is a diagnostic chat bot
                         that aims to help those in remote areas with a little to no access to medical facilities. This system tries to identify the sickness of the patient
@@ -242,26 +262,31 @@ export default function Projects() {
                 </div>
 
                 {showChatbot && (
-                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
-                        <Carousel className='rounded-xl h-3/4 w-3/4 relative z-10'>
-                            <img src={chatbotStartPage} className='w-full'/>
-                            <img src={chatbotName} className='w-full'/>
-                            <img src={chatbotAge} className='w-full'/>
-                            <img src={chatbotEnvironment} className='w-full'/>
-                            <img src={chatbotChiefComplaint} className='w-full'/>
-                            <img src={chatbotSymptoms} className='w-full'/>
-                            <img src={chatbotTimeline} className='w-full'/>
-                            <img src={chatbotVice} className='w-full'/>
-                            <img src={chatbotHistory} className='w-full'/>
-                            <img src={chatbotResult} className='w-full h-full'/>
-                            <img src={chatbotOther} className='w-full'/>
-                        </Carousel>
+                    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 border">
+                        <div className="relative z-10 w-3/4 md:w-1/2 mx-auto">
+                            <Carousel className='rounded-xl h-full mx-auto'>
+                                <img src={chatbotStartPage} className='w-full'/>
+                                <img src={chatbotName} className='w-full'/>
+                                <img src={chatbotAge} className='w-full'/>
+                                <img src={chatbotEnvironment} className='w-full'/>
+                                <img src={chatbotChiefComplaint} className='w-full'/>
+                                <img src={chatbotSymptoms} className='w-full'/>
+                                <img src={chatbotTimeline} className='w-full'/>
+                                <img src={chatbotVice} className='w-full'/>
+                                <img src={chatbotHistory} className='w-full'/>
+                                <img src={chatbotResult} className='w-full h-full'/>
+                                <img src={chatbotOther} className='w-full'/>
+                            </Carousel>
+                        </div>
                         <div onClick={() => setShowChatbot(false)} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80"></div>
                     </div>
                 )}
 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'> 
-                    <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://healthysys.netlify.app')}>HealthSys {arrowUpFromSquare}</button>
+                    <div className='flex justify-between'>
+                        <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://healthysys.netlify.app')}>HealthSys {arrowUpFromSquare}</button>
+                        <button className='text-3xl' onClick={() => window.open('https://github.com/shuan-co/Health-Care-System')}>{githubIcon}</button>
+                    </div>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course CSSWENG - Software Engineering. This project intends to help a client that struggles
                         with managing data records of patients in their hospitals. This system aids them by providing a medium to store the data with ease through digital forms
@@ -288,7 +313,10 @@ export default function Projects() {
                 </div>
 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'> 
-                    <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://sentimetry.vercel.app')}>Sentimetry {arrowUpFromSquare}</button>
+                    <div className='flex justify-between'>
+                        <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://sentimetry.vercel.app')}>Sentimetry {arrowUpFromSquare}</button>
+                        <button className='text-3xl' onClick={() => window.open('https://github.com/riu-rd/Sentimetry')}>{githubIcon}</button>
+                    </div>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfilment of the course EMPATHY - Empathic Computing in Human-System Interaction. This application intends to 
                         help those that are experiencing mental health problems. This application basically is a journaling system where users can sign up and log their journal entries. 
@@ -321,7 +349,10 @@ export default function Projects() {
                 </div>
 
                 <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
-                    <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://multivault.netlify.app')}>Multivault {arrowUpFromSquare}</button>
+                    <div className='flex justify-between'>
+                        <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://multivault.netlify.app')}>Multivault {arrowUpFromSquare}</button>
+                        <button className='text-3xl' onClick={() => window.open('https://github.com/shuan-co/MultiVault')}>{githubIcon}</button>
+                    </div>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course STSWENG - Advanced Software Engineering. It aims to assist businesses in managing 
                         their inventory efficiently. The application serves as an inventory management system that enables administrators (owners of the establishment) to 

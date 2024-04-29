@@ -40,9 +40,18 @@ export default withMT({
         },
         
         fontSize: {
-            '10xl': ['12rem', { lineHeight: '1' }],
+            '10xl': ['9rem', { lineHeight: '1' }],
         }
     },
+    screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        '3xl': '1920px',
+        '4xl': '2560px', // Custom breakpoint for 4xl screen size
+      },
   },
   plugins: [],
 });

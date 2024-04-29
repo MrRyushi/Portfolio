@@ -6,6 +6,11 @@ import Contact from './Contact';
 
 import Work from './Work';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
+const burger = <FontAwesomeIcon icon={faBars}/>
+
 export default function Landing() {
     const [isOpen, setIsOpen] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -50,155 +55,154 @@ export default function Landing() {
 
     return (
         <div className='w-screen bg-gradient-to-r from-teal-950 to-teal-600'>
-            <div id='home' className='items-center text-gray-50 px-5 py-6'>
-                {isSmallScreen ? (
-                    <div className='flex justify-start montserrat ps-2'>
-                        <button className='text-lg sm:text-lg md:text-xl hover:text-teal-400 pe-10' onClick={() => setIsOpen(!isOpen)}>
-                            Menu
-                        </button>
-                    </div>
-                ) : (
-                    <div className='flex gap-24 item-center montserrat justify-center'>
-                        <button
-                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('experience');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Experience
-                        </button>
-                        <button
-                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('projects');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Projects
-                        </button>
-                        <button
-                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('skills');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Skills
-                        </button>
-                        <button
-                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
-                            onClick={() => {
-                                setIsOpen(false);
-                                handleDownload();
-                            }}
-                        >
-                            Resume / CV
-                        </button>
-                        <button
-                            className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('contact');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Contact
-                        </button>
-                    </div>
-                )}
-            </div>
-            {/* Responsive Navbar */}
-            <Transition
-                show={isOpen}
-                enter='transition-opacity duration-500'
-                enterFrom='opacity-0'
-                enterTo='opacity-100'
-                leave='transition-opacity duration-500'
-                leaveFrom='opacity-100'
-                leaveTo='opacity-0'
-            >
-                {(ref) => (
-                    <div ref={ref} className='absolute top-16 right-5 bg-teal-950 text-gray-50 p-5 rounded-md shadow-lg'>
-                        <button
-                            className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('experience');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Experience
-                        </button>
-                        <button
-                            className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('projects');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Projects
-                        </button>
-                        <button
-                            className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('skills');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Skills
-                        </button>
-                        <button
-                            className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
-                            onClick={() => {
-                                setIsOpen(false);
-                                handleDownload();
-                            }}
-                        >
-                            Resume / CV
-                        </button>
-                        <button
-                            className='block text-md sm:text-lg md:text-xl hover:text-teal-400'
-                            onClick={() => {
-                                setIsOpen(false);
-                                const tellMeMoreElement = document.getElementById('contact');
-                                if (tellMeMoreElement) {
-                                    tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                            }}
-                        >
-                            Contact
-                        </button>
-                    </div>
-                )}
-            </Transition>
-            {/* Main Content */}
-            <div className='space-y-10 py-20 bg-stone-50 w-screen text-gray-50 montserrat'>
-                <div className='xs:px-12 sm:px-16 md:px-20 lg:px-24 xl:px-32 2xl:px-48 space-y-1 flex justify-center gap-20 items-center mb-20 px-20 py-24 px w-full'>
-                    <div className='space-y-10 w-full bg-center bg-no-repeat bg-cover '>
-                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl 2xl:text-9xl leading-none text-center'>Hi, I'm John Patrick Marcellana</h1>
+            <div className='h-screen'>
+                <div id='home' className='items-center text-gray-50 px-5 py-6'>
+                    {isSmallScreen ? (
+                        <div className='flex justify-start montserrat ps-2'>
+                            <button className='text-2xl sm:text-2xl md:text-3xl hover:text-teal-400 pe-10' onClick={() => setIsOpen(!isOpen)}>
+                                {burger}
+                            </button>
+                        </div>
+                    ) : (
+                        <div className='flex md:gap-8 lg:gap-16 xl:gap-24 item-center montserrat justify-center'>
+                            <button
+                                className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('experience');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Experience
+                            </button>
+                            <button
+                                className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('skills');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Skills
+                            </button>
+                            <button
+                                className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('projects');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Projects
+                            </button>
+                            <button
+                                className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    handleDownload();
+                                }}
+                            >
+                                Resume / CV
+                            </button>
+                            <button
+                                className='block text-xl hover:text-teal-400 hover:bg-gray-50 p-2 rounded-xl'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('contact');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Contact
+                            </button>
+                        </div>
+                    )}
+                </div>
+                {/* Responsive Navbar */}
+                <Transition
+                    show={isOpen}
+                    enter='transition-opacity duration-500'
+                    enterFrom='opacity-0'
+                    enterTo='opacity-100'
+                    leave='transition-opacity duration-500'
+                    leaveFrom='opacity-100'
+                    leaveTo='opacity-0'
+                >
+                    {(ref) => (
+                        <div ref={ref} className='absolute top-16 left-5 bg-teal-800 text-gray-50 rounded-md shadow-lg p-5'>
+                            <button
+                                className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('experience');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Experience
+                            </button>
+                            <button
+                                className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('skills');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Skills
+                            </button>
+                            <button
+                                className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('projects');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Projects
+                            </button>
+                            <button
+                                className='block mb-3 text-md sm:text-lg md:text-xl hover:text-teal-400'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    handleDownload();
+                                }}
+                            >
+                                Resume / CV
+                            </button>
+                            <button
+                                className='block text-md sm:text-lg md:text-xl hover:text-teal-400'
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    const tellMeMoreElement = document.getElementById('contact');
+                                    if (tellMeMoreElement) {
+                                        tellMeMoreElement.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
+                            >
+                                Contact
+                            </button>
+                        </div>
+                    )}
+                </Transition>
+                {/* Main Content */}
+                <div className='space-y-10 bg-stone-50 w-screen h-5/6 text-gray-50 montserrat flex justify-center items-center'>
+                    <div className='xs:px-12 sm:px-16 md:px-20 lg:px-24 xl:px-36 2xl:px-48 space-y-10'>
+                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-9xl 3xl:text-10xl leading-none text-center'>Hi, I'm John Patrick Marcellana</h1>
                         <h3 className='text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-center'>An aspiring Software Engineer</h3>
                     </div>
-
                 </div>
             </div>
 
