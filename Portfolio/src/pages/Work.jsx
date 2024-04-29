@@ -1,14 +1,38 @@
+import { useEffect } from "react";
 export default function Work() {
+    useEffect(() => {
+        const elements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.classList.remove('out');
+                } else {
+                    entry.target.classList.add('out');
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Cleanup
+        return () => observer.disconnect();
+    }, []);
+
   return (
-    <div id="experience" className='flex justify-center items-center montserrat text-gray-50 text-2xl py-20'>
+    <div id="experience" className='flex justify-center items-center montserrat text-gray-50 text-2xl py-20 fade-in'>
         <div className='xl:space-y-6 px-12 sm:px-24 md:px-32 lg:px-48 xl:px-60 2xl:px-72'>
             <h1 className='text-xl md:text-2xl lg:text-3xl font-bold'>Work Experience</h1>
             <div className='lg:grid lg:grid-cols-6 gap-10 p-4 rounded-xl shadow-2xl drop-shadow-2xl'>
                 <div className="col-span-2 text-gray-300">
-                    <p className="text-base md:text-lg lg:text-xl">September 2023 - March 2024</p>
+                    <p className="text-base md:text-lg lg:text-xl ">September 2023 - March 2024</p>
                 </div>
-                <div className='col-span-4 space-y-3'>
-                    <div>
+                <div className='col-span-4 space-y-3 '>
+                    <div className="">
                         <p className="font-semibold text-lg md:text-xl lg:text-2xl">Website and Marketing Specialist | iLearnTech UK</p>
                         <p className="text-base md:text-lg lg:text-xl"> Designed and managed the development of iLearnTech's website. Created and executed targeted Facebook advertising campaigns to enhance brand visibility and engagement.</p>
                     </div>

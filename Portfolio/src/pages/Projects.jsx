@@ -38,13 +38,13 @@ import chatbotVice from '../assets/chatbot/vice.png'
 import { Carousel } from "@material-tailwind/react"
 // import useState
 import { useState } from 'react'
+import { useEffect } from 'react'
 // font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare} from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const githubIcon = <FontAwesomeIcon icon={faGithub} />
-
 const arrowUpFromSquare = <FontAwesomeIcon icon={faArrowUpRightFromSquare}/>
 
 export default function Projects() {
@@ -56,13 +56,35 @@ export default function Projects() {
     const [showCyberlab, setShowCyberlab] = useState(false)
     const [showChatbot, setShowChatbot] = useState(false)
 
+    useEffect(() => {
+        const elements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.classList.remove('out');
+                } else {
+                    entry.target.classList.add('out');
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Cleanup
+        return () => observer.disconnect();
+    }, []);
 
   return (
     <div id='projects' className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72 space-y-5 bg-gradient-to-r from-teal-950 to-teal-600 py-20 montserrat'>
         <div className='space-y-7 text-gray-50'>
-            <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold'>Projects</h1>
+            <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold fade-in'>Projects</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 text-xl ps-1 gap-8 xs:gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-20'>
-                <div className='space-y-2'>
+                <div className='space-y-2 fade-in'>
                     <div className='space-y-2 rounded-xl p-5 bg-teal-950/40 text-start'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => setShowGOT(true)}>Game of Thrones-Inspired Game {arrowUpFromSquare}</button>
                         <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
@@ -88,7 +110,7 @@ export default function Projects() {
                 )}
 
                 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'>
                     <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => setShowCWordle(true)}>C Wordle Plus {arrowUpFromSquare}</button>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project, submitted as part of CCPROG2 - Programming with Structured Data Types course aims to create a text-based version of the immensely 
@@ -113,7 +135,7 @@ export default function Projects() {
 
                 {/*CCDSTRU Checkers Project*/}
                 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'>
                     <div className='flex justify-between'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowMyFarm(true)}>MyFarm {arrowUpFromSquare}</button>
                         <button className='text-3xl' onClick={() => window.open('https://github.com/Samoyedeu/MyFarmMCO2')}>{githubIcon}</button>
@@ -151,7 +173,7 @@ export default function Projects() {
 
 
                 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'>
                     <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowHoA(true)}>Homeowners Management System {arrowUpFromSquare}</button>
                     <p className='text-sm sm:text-md md:text-lg lg:text-xl'>
                         This project was submitted in partial fulfillment of the course CCINFOM - Information Management. This application handles the management system of
@@ -189,7 +211,7 @@ export default function Projects() {
 
                 {/* CSADPRG Tax Calculator */}
 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'>
                     <div className='flex justify-between'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600 text-start' onClick={() => setShowCyberlab(true)}>CyberLab {arrowUpFromSquare}</button>
                         <button className='text-3xl' onClick={() => window.open('https://github.com/MrRyushi/CCAPDEV-Machine-Project')}>{githubIcon}</button>
@@ -239,7 +261,7 @@ export default function Projects() {
                 )}
 
 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'>
                     <div className='flex justify-between'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => setShowChatbot(true)}>Medical Chatbot {arrowUpFromSquare}</button>
                         <button className='text-3xl' onClick={() => window.open('https://github.com/SakuZN/PROLOG-MCO2')}>{githubIcon}</button>
@@ -282,7 +304,7 @@ export default function Projects() {
                     </div>
                 )}
 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'> 
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'> 
                     <div className='flex justify-between'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://healthysys.netlify.app')}>HealthSys {arrowUpFromSquare}</button>
                         <button className='text-3xl' onClick={() => window.open('https://github.com/shuan-co/Health-Care-System')}>{githubIcon}</button>
@@ -312,7 +334,7 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'> 
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'> 
                     <div className='flex justify-between'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://sentimetry.vercel.app')}>Sentimetry {arrowUpFromSquare}</button>
                         <button className='text-3xl' onClick={() => window.open('https://github.com/riu-rd/Sentimetry')}>{githubIcon}</button>
@@ -348,7 +370,7 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40'>
+                <div className='space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in'>
                     <div className='flex justify-between'>
                         <button className='text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600' onClick={() => window.open('https://multivault.netlify.app')}>Multivault {arrowUpFromSquare}</button>
                         <button className='text-3xl' onClick={() => window.open('https://github.com/shuan-co/MultiVault')}>{githubIcon}</button>

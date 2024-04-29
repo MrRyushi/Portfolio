@@ -21,12 +21,37 @@ import iconGithub from '../assets/techstack/github.png'
 import iconCanva from '../assets/techstack/canva.png'
 import iconFigma from '../assets/techstack/figma.png'
 
+import { useEffect } from 'react'
+
 export default function Skills() {
+    useEffect(() => {
+        const elements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.classList.remove('out');
+                } else {
+                    entry.target.classList.add('out');
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Cleanup
+        return () => observer.disconnect();
+    }, []);
+
   return (
     <div id="skills" className='px-8 xs:px-14 sm:px-20 md:px-28 lg:px-52 xl:px-72 space-y-5 py-20 bg-gray-900 text-gray-50 montserrat'>
-        <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold'>Technical Skills</h1>
+        <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold fade-in'>Technical Skills</h1>
         <div className='space-y-12 xs:space-y-16 sm:space-y-20 md:space-y-24 lg:space-y-28 xl:space-y-32'>
-            <div className='space-y-12'>
+            <div className='space-y-12 fade-in'>
                 <h1 className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Programming Languages</h1>
                 <div className="text-lg ps-1 flex gap-10 hover:shadow-2xl hover:drop-shadow-2xl rounded-2xl p-3">
                     <div className='grid grid-cols-6 items-center text-center gap-10 justify-items-center text-2xl'>
@@ -58,7 +83,7 @@ export default function Skills() {
                     </div>
                 </div>
             </div>
-            <div className='space-y-12'>
+            <div className='space-y-12 fade-in'>
                 <h1 className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Frameworks</h1>
                 <div className='grid grid-cols-5 items-center text-center gap-10 justify-items-center text-2xl hover:shadow-2xl hover:drop-shadow-2xl rounded-2xl p-3'>
                     <div className='space-y-4'>
@@ -83,7 +108,7 @@ export default function Skills() {
                     </div>                  
                 </div> 
             </div>
-            <div className='space-y-12'>
+            <div className='space-y-12 fade-in'>
                 <h1 className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Databases</h1>
                 <div className='grid grid-cols-3 items-center text-center justify-items-center gap-10 text-2xl hover:shadow-2xl hover:drop-shadow-2xl rounded-2xl p-3'>
                     <div className='space-y-4'>
@@ -101,7 +126,7 @@ export default function Skills() {
                            
                 </div>
             </div>
-            <div className='space-y-12'>
+            <div className='space-y-12 fade-in'>
                 <h1 className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Tools</h1>
                 <div className='grid grid-cols-4 items-center text-center gap-10 justify-items-center text-2xl hover:shadow-2xl hover:drop-shadow-2xl rounded-2xl p-3'>
                     <div className='space-y-4'>
