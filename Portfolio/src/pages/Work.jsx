@@ -53,9 +53,9 @@ export default function Work() {
               </p>
             </div>
             <div className="flex gap-2 text-sm md:text-base lg:text-lg">
-              <p className="bg-teal-950 p-2 rounded-lg">Facebook Ads</p>
-              <p className="bg-teal-950 p-2 rounded-lg">Figma</p>
-              <p className="bg-teal-950 p-2 rounded-lg">Hostinger</p>
+              <p className="bg-teal-950 p-2 rounded-lg">NextJS</p>
+              <p className="bg-teal-950 p-2 rounded-lg">Tailwind CSS</p>
+              <p className="bg-teal-950 p-2 rounded-lg">Git</p>
             </div>
           </div>
         </div>
@@ -79,9 +79,9 @@ export default function Work() {
               </p>
             </div>
             <div className="flex gap-2 text-sm md:text-base lg:text-lg">
-              <p className="bg-teal-950 p-2 rounded-lg">NextJS</p>
-              <p className="bg-teal-950 p-2 rounded-lg">Tailwind CSS</p>
-              <p className="bg-teal-950 p-2 rounded-lg">Git</p>
+              <p className="bg-teal-950 p-2 rounded-lg">Facebook Ads</p>
+              <p className="bg-teal-950 p-2 rounded-lg">Figma</p>
+              <p className="bg-teal-950 p-2 rounded-lg">Hostinger</p>
             </div>
           </div>
         </div>
