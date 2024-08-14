@@ -222,7 +222,7 @@ export default function Landing() {
                 {/* Main Content */}
                 <div className='space-y-10 bg-stone-50 w-screen h-5/6 text-gray-50 montserrat flex justify-center items-center fade-in'>
                     <div className='xs:px-12 sm:px-16 md:px-20 lg:px-24 xl:px-36 2xl:px-48 space-y-10'>
-                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-9xl 3xl:text-10xl leading-none text-center'>Hi, I'm John Patrick Marcellana</h1>
+                        <h1 className='text-6xl sm:text-7xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-9xl 3xl:text-10xl leading-none text-center'>Hi, {"I'm"} John Patrick Marcellana</h1>
                         <h3 className='text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-center'>An aspiring Software Engineer</h3>
                     </div>
                 </div>
