@@ -235,7 +235,7 @@ export default function Landing() {
                         </div>
 
                         <h1 className='text-5xl xs:text-7xl md:text-8xl lg:text-8xl xl:text-8xl 2xl:text-9xl 3xl:text-10xl leading-none text-center'>Hi, {"I'm"} John Patrick Marcellana</h1>
-                        <h3 className='text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-center'>An aspiring Software Engineer</h3>
+                        <h3 className='text-2xl xs:text-3xl md:text-4xl lg:text-5xl text-center'>A Software Engineer</h3>
                     </div>
                 </div>
             </div>

@@ -94,6 +94,41 @@ export default function Projects() {
             <div className="flex justify-between">
               <button
                 className="text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600"
+                onClick={() => window.open("https://trycita.vercel.app/")}
+              >
+                Cita {arrowUpFromSquare}
+              </button>
+              <button
+                className="text-3xl"
+                onClick={() => window.open("https://github.com/MrRyushi/Cita")}
+              >
+                {githubIcon}
+              </button>
+            </div>
+            <p className="text-sm sm:text-md md:text-lg lg:text-xl">
+              Cita is a modern web application that helps people connect and
+              meet new individuals through a swipe-based matching system. Built
+              with Next.js, Firebase, and Tailwind CSS, it features real-time
+              matching, messaging, and profile management in a clean, responsive
+              interface.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              <div className="bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl">
+                NextJS
+              </div>
+              <div className="bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl">
+                Tailwind CSS
+              </div>
+              <div className="bg-emerald-600 text-gray-100 w-max p-2 flex items-center rounded-md shadow-2xl drop-shadow-2xl text-sm sm:text-md md:text-lg lg:text-xl">
+                Firebase
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-2  rounded-xl p-5 bg-teal-950/40 fade-in">
+            <div className="flex justify-between">
+              <button
+                className="text-lg lg:text-xl xl:text-2xl font-bold opacity-100 hover:text-emerald-600"
                 onClick={() =>
                   window.open("https://skillmatch-project.vercel.app")
                 }
