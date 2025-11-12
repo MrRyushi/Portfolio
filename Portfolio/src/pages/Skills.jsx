@@ -5,6 +5,7 @@ import iconHTML from '../assets/techstack/html.png'
 import iconJava from '../assets/techstack/java.png'
 import iconJavaScript from '../assets/techstack/javascript.png'
 import iconPython from '../assets/techstack/python.png'
+import iconNextJS from '../assets/techstack/nextjs.svg'
 // import frameworks images
 import iconReact from '../assets/techstack/react.png'
 import iconExpress from '../assets/techstack/express.png'
@@ -83,7 +84,11 @@ export default function Skills() {
             </div>
             <div className='space-y-12 fade-in'>
                 <h1 className='text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Frameworks</h1>
-                <div className='grid grid-cols-5 items-center text-center gap-10 justify-items-center text-2xl hover:shadow-2xl hover:drop-shadow-2xl rounded-2xl p-3'>
+                <div className='grid grid-cols-6 items-center text-center gap-10 justify-items-center text-2xl hover:shadow-2xl hover:drop-shadow-2xl rounded-2xl p-3'>
+                    <div className='space-y-4'>
+                        <img src={iconNextJS} className="h-10 xs:h-12 sm:h-16 md:h-24 lg:h-32 xl:h-40"/>   
+                        <h3 className='text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl'>NextJS</h3>                        
+                    </div>
                     <div className='space-y-4'>
                         <img src={iconReact} className="h-10 xs:h-12 sm:h-16 md:h-24 lg:h-32 xl:h-40"/>   
                         <h3 className='text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl'>React</h3>                        
