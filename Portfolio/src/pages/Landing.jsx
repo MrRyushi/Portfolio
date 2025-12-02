@@ -240,10 +240,6 @@ export default function Landing() {
                 </div>
             </div>
 
-            <Work />
-
-            <Education />
-
             <Skills />
 
             <Projects />
